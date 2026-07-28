@@ -23,7 +23,6 @@ class CallsResource(BaseResource):
         knowledge_base_id: Optional[str] = None,
         from_number: Optional[str] = None,
         metadata: Optional[dict] = None,
-        scheduled_at: Optional[str] = None,
         config: Optional[dict] = None,
     ) -> Union[Call, List[Call]]:
         """Place a call. A number and a prompt (or agent) are the hard requirements.
@@ -55,6 +54,8 @@ class CallsResource(BaseResource):
         Calls start ``queued``; the dialer places them as the phone number's
         concurrency limit and minute quota allow (each answered call bills
         ``ceil(duration_sec / 60)`` against the line).
+
+        Schedule elsewhere — this API places the call when you call ``create``.
         """
         body: Dict[str, Any] = {"to": to if isinstance(to, str) else list(to)}
         for key, value in (
@@ -68,7 +69,6 @@ class CallsResource(BaseResource):
             ("knowledge_base_id", knowledge_base_id),
             ("from_number", from_number),
             ("metadata", metadata),
-            ("scheduled_at", scheduled_at),
             ("config", config),
         ):
             if value is not None:

@@ -63,7 +63,6 @@ class Call(_Base):
     hangup_cause: Optional[str] = None
     error: Optional[CallError] = None
     usage: CallUsage = CallUsage()
-    scheduled_at: Optional[datetime] = None
     created_at: Optional[datetime] = None
     started_at: Optional[datetime] = None
     answered_at: Optional[datetime] = None

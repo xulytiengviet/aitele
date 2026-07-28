@@ -41,7 +41,6 @@ CALL_JSON = {
     "error": None,
     "usage": {"model": None, "input_tokens": None, "output_tokens": None,
               "cost_usd": None, "latency_ms": None},
-    "scheduled_at": None,
     "created_at": "2026-07-23T06:00:00.000Z",
     "started_at": None,
     "answered_at": None,

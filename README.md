@@ -10,6 +10,7 @@
 </p>
 
 <p align="center">
+  <a href="https://mtds.vn/">mtds.vn</a> ·
   <a href="https://telecom.mtds.vn/">Platform</a> ·
   <a href="https://telecom.mtds.vn/api-docs.html">API reference</a> ·
   <a href="https://telecom.mtds.vn/openapi.yaml">OpenAPI</a>
@@ -48,8 +49,15 @@ against a local deployment.
 ## Calls
 
 ```python
-# Prompt inline
+# Prompt inline — omit from_number → platform uses your first active SIP line
 client.calls.create(to="+84901234567", prompt="...")
+
+# Pick which number to call from (display number, SIP extension, or trunk name)
+client.calls.create(
+    to="+84901234567",
+    prompt="...",
+    from_number="0592014235",
+)
 
 # Pick a voice (Vietnamese default on the platform is Giang)
 client.calls.create(to="+84901234567", prompt="...", voice="s6W2NupNY6TykGJoDtWy")
@@ -75,11 +83,10 @@ client.calls.create(
 # Many numbers at once → returns a list
 client.calls.create(to=["+84901234567", "+84912345678"], agent_id="agent_9fQz...")
 
-# Schedule for later, and attach your own IDs
+# Attach your own IDs (scheduling belongs in your own system — call create when ready)
 client.calls.create(
     to="+84901234567",
     prompt="...",
-    scheduled_at="2026-08-01T02:00:00Z",
     metadata={"crm_id": "C-42"},
 )
 ```
@@ -253,13 +260,22 @@ is actually sent.
 
 ## Phone numbers
 
-Read-only; numbers are provisioned by an administrator.
+Read-only; numbers are provisioned by an administrator (SIP line ↔ trunk).
+They are **not** configured on the Agent — pass `from_number` per call, or omit
+it and the first active number on the account is used.
 
 ```python
 for number in client.phone_numbers.list():
-    print(number.number, number.status, number.quota_remaining)
+    print(number.id, number.number, number.trunk, number.quota_remaining)
+    # number.id      → SIP extension, e.g. "1001"
+    # number.number  → caller ID customers see, e.g. "0592014235"
 
-client.calls.create(to="+84901234567", prompt="...", from_number="0592014235")
+# Explicit from_number — accepts display number, extension, or trunk name
+client.calls.create(
+    to="+84901234567",
+    prompt="...",
+    from_number="0592014235",   # or "1001" or "trunk-name"
+)
 ```
 
 Each number carries its own **concurrency limit**, **minute quota** and
