@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://telecom.mtds.vn/">
-    <img src="https://telecom.mtds.vn/logo.png" alt="AITele — AI Telecom" width="220" />
+    <img src="./assets/aitele-logo.svg" alt="AITele — AI Voice Agent" width="360" />
   </a>
 </p>
 
@@ -16,7 +16,7 @@
 </p>
 
 <p align="center">
-  <a href="https://www.npmjs.com/package/@mtdsdev/ai-telecom">
+  <a href="https://telecom.mtds.vn/">
     <img src="https://img.shields.io/npm/v/%40mtdsdev%2Fai-telecom?logo=npm&label=NPM&color=CB3837" alt="NPM version" />
   </a>
   <img src="https://img.shields.io/badge/Node.js-18%2B-339933?logo=nodedotjs&logoColor=white" alt="Node.js 18+" />
@@ -28,11 +28,11 @@
 <p align="center">
   <a href="https://telecom.mtds.vn/"><strong>🚀 Mở nền tảng</strong></a>
   ·
-  <a href="https://telecom.mtds.vn/api-docs.html"><strong>📚 API Reference</strong></a>
+  <a href="https://telecom.mtds.vn/"><strong>📚 API Reference</strong></a>
   ·
-  <a href="https://telecom.mtds.vn/openapi.yaml"><strong>🧩 OpenAPI</strong></a>
+  <a href="https://telecom.mtds.vn/"><strong>🧩 OpenAPI</strong></a>
   ·
-  <a href="https://www.npmjs.com/package/@mtdsdev/ai-telecom"><strong>📦 Node.js SDK</strong></a>
+  <a href="https://telecom.mtds.vn/"><strong>📦 Node.js SDK</strong></a>
 </p>
 
 ---
@@ -688,8 +688,8 @@ SDK trả về signed URL có thời hạn. Chỉ tạo URL khi cần và không
 
 AITele hoan nghênh developer và doanh nghiệp:
 
-- Trải nghiệm [Node.js SDK trên NPM](https://www.npmjs.com/package/@mtdsdev/ai-telecom).
-- Gửi lỗi qua [GitHub Issues](https://github.com/xulytiengviet/aitele/issues).
+- Truy cập [cổng AITele](https://telecom.mtds.vn/) để trải nghiệm Node.js SDK và tài liệu tích hợp.
+- Gửi lỗi và phản hồi qua [kênh hỗ trợ AITele](https://telecom.mtds.vn/).
 - Đề xuất use case, ví dụ tích hợp hoặc cải tiến tài liệu.
 - Không đăng API key, webhook secret, số điện thoại thật, transcript hoặc dữ liệu khách hàng vào issue công khai.
 
@@ -707,16 +707,16 @@ Khi report bug, vui lòng cung cấp:
 ## 🔗 Liên kết
 
 - 🌐 [AITele Platform](https://telecom.mtds.vn/)
-- 📚 [API Reference](https://telecom.mtds.vn/api-docs.html)
-- 🧩 [OpenAPI specification](https://telecom.mtds.vn/openapi.yaml)
-- 📦 [Node.js SDK — `@mtdsdev/ai-telecom`](https://www.npmjs.com/package/@mtdsdev/ai-telecom)
-- 🏢 [MTDS](https://mtds.vn/)
+- 📚 [API Reference](https://telecom.mtds.vn/)
+- 🧩 [OpenAPI specification](https://telecom.mtds.vn/)
+- 📦 [Node.js SDK — `@mtdsdev/ai-telecom`](https://telecom.mtds.vn/)
+- 🏢 [AITele](https://telecom.mtds.vn/)
 
 ## 📄 License
 
 Phát hành theo giấy phép **MIT**.
 
-Copyright © MTDS.
+Copyright © AITele.
 
 ---
 
@@ -727,7 +727,7 @@ Copyright © MTDS.
 <p align="center">
   <a href="https://telecom.mtds.vn/">Bắt đầu ngay</a>
   ·
-  <a href="https://telecom.mtds.vn/api-docs.html">Đọc tài liệu</a>
+  <a href="https://telecom.mtds.vn/">Đọc tài liệu</a>
   ·
-  <a href="https://github.com/xulytiengviet/aitele/issues">Report bug</a>
+  <a href="https://telecom.mtds.vn/">Report bug</a>
 </p>
