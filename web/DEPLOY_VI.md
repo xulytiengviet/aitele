@@ -7,9 +7,9 @@
 - Project: `aitele`
 - Địa chỉ: https://aitele.pages.dev
 - GitHub: `xulytiengviet/aitele`, branch `cloudflare-pages`
-- Root directory: `/`
+- Root directory: `web`
 - Build command: **để trống**
-- Build output directory: `web` (Pages Functions nằm ở `web/functions/`)
+- Build output directory: `.` (Pages Functions nằm ở `web/functions/`)
 - Preview deployments: tắt để tránh môi trường preview có thể phát sinh cuộc gọi thật.
 
 ## Secrets bắt buộc
